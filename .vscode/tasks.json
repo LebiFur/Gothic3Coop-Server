@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C++: cl.exe build exe",
+			"command": "cl.exe",
+			"args": [
+				"/EHsc",
+				"/W1",
+				"/Zi",
+				"/nologo",
+				"/Fe${workspaceFolder}\\bin\\Gothic3Server.exe",
+				//"/Fo${workspaceFolder}\\bin\\Gothic3Server.obj",
+				//"/I${workspaceFolder}\\include\\Shared",
+				"${workspaceFolder}\\src\\*.cpp",
+				//"${workspaceFolder}\\lib\\*.lib",
+				//"User32.lib"
+				"Ws2_32.lib"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		}
+	]
+}
